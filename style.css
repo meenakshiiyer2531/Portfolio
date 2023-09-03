@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital@1&family=Exo+2&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital@1&family=Dancing+Script&family=Exo+2&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital@1&family=Cinzel:wght@500&family=Dancing+Script&family=Exo+2&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital@1&family=Cinzel:wght@500&family=Dancing+Script&family=Exo+2&family=Playball&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Athiti:wght@500&family=Bitter:ital@1&family=Cinzel:wght@500&family=Dancing+Script&family=Exo+2&family=Playball&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Athiti:wght@500&family=Bitter:ital@1&family=Cinzel:wght@500&family=Dancing+Script&family=Exo+2&family=Oranienbaum&family=Playball&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Athiti:wght@500&family=Bitter:ital@1&family=Cinzel:wght@500&family=Courgette&family=Dancing+Script&family=Exo+2&family=Oranienbaum&family=Playball&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+.top{
+    display: flex;
+   
+
+}
+.top img{
+    border-radius: 15px;
+}
+.top h1{
+    font-size: 40px;
+    padding-left: 50px;
+}
+
+.slidebar{
+    background-color: white;
+    font-family: 'Exo 2', sans-serif;
+    padding: 30px;
+    text-decoration: none;
+    color: black;
+    text-decoration-color: black;
+}
+body{
+    background-color: black;
+    color: aliceblue;
+    
+}
+.slidebar a{
+    text-decoration: none;
+}
+.main{
+    color: aliceblue;
+   
+}
+.hello{
+    color: antiquewhite;
+    font-family: 'Athiti', sans-serif;
+    font-size: 130px;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+
+}
+
+nav ul {
+    font-family: 'Dancing Script', cursive;
+    display: flex;
+    list-style: none;
+    margin: 30px;
+    justify-content: space-evenly;
+}
+nav ul a:hover{
+    color:white;
+    background:black;
+    border-radius: 15px;
+    padding: 20px;
+    font-size: 20px;
+    font-family: 'Cinzel', serif;
+}
+
+.main h1{
+    padding-top: 100px;
+    color: antiquewhite;
+    font-family: 'Cinzel', serif;
+    font-size: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+.main p{
+    padding-top: 20px;
+    color: antiquewhite;
+    font-family: 'Athiti', sans-serif;
+    font-size: 40px;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.slidebar h1{
+    font-family: 'Playball', cursive;
+    height: 30px;
+
+}
+.foot{
+    padding:30px ;
+    display: flex;
+    justify-content: space-evenly;
+}
+.foot a{
+    padding:20px ;
+    display: flex;
+    justify-content: left;
+    color: aliceblue;
+    text-decoration: none;
+    align-items: left;
+
+}
+.social-icons {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    font-size: 40px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color:whitesmoke;
+    font-size: 40px;
+   display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.container h2{
+    padding: 50px;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    font-size: 80px;
+  
+}
+
+.container p{
+    
+    padding: 50px;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    font-size: 60px;
+    font-family: 'Oranienbaum', serif;
+    padding-bottom: 160px;
+}
+
+
+
+.experience-card {
+    padding: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 60px;
+}
+
+
+
+.carde {
+    flex-basis: calc(33.33% - 20px); /* Adjust the width of the cards */
+    padding: 100px;
+   
+font-size: 50px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px white;
+}
+
+.carde:hover {
+    padding: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: black;
+    background-color: blue;
+}
+
+.carde h3 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.carde p {
+    font-size: 30px;
+    color:white;
+    margin-bottom: 5px;
+}
+
+
+.carde ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.carde li {
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+
+
+
+
+.skills-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    flex-basis: calc(33.33% - 20px); /* Adjust the width of the cards */
+    padding: 20px;
+  
+
+    margin-bottom: 20px;
+  
+}
+
+.card h3 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.card ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.card li {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.project-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 70px;
+}
+
+.card {
+    width: 30%; /* Adjust the width of the cards */
+   
+   
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+
+    color:black;
+background-color: blue;
+}
+
+.card .card-header {
+    background-color: #007bff;
+    color:black;
+    padding: 15px;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.card .card-header h3 {
+    font-size: 40px;
+    margin: 0;
+}
+
+.card .card-body {
+    padding: 15px;
+}
+
+.card .card-body p {
+    font-size:30px;
+    margin-bottom: 10px;
+}
+
+.card .card-body ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.card .card-body li {
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+.card .card-footer {
+    
+    padding: 15px;
+    text-align: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.card .card-footer a {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color:black;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.card .card-footer a:hover {
+   
+   color:black;
+   
+}
+
+.social-icons1 {
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.social-icons1 a {
+    
+    text-decoration: none;
+    
+    font-size: 60px;
+   
+    justify-content:space-between;
+    align-items: center;
+}
+
+.social-icons1 a :hover {
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: white;
+    background-color: black;
+}
+.contact-page h1{
+    display: flex;
+    justify-content:center;
+    color: white;
+    padding: 60px;
+    padding-bottom: 10px;
+    font-size: 70px;
+    font-family: 'Cinzel', serif;
+}
+.contact-page h2{
+    display: flex;
+    justify-content:center;
+    color: orange;
+    padding: 60px;
+    font-size: 100px;
+    font-family: 'Courgette', cursive;
+}
+
+.contact-page h3{
+    display: flex;
+    justify-content:center;
+    color: lightpink;
+    padding: 20px;
+    font-size: 30px;
+    font-family: 'Athiti', sans-serif;
+}
+
+.section{
+    background-color: black;
+    color: aliceblue;
+    
+}
+.section.card:hover{
+background-color: aliceblue;
+color: black;
+}
+.contact-page.wa{
+    color: green;
+    background-color: green;
+}
