@@ -12,45 +12,32 @@
       @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
 
 
-      *{
-    margin: 0;
-    padding: 0;
+     .navbar nav ul {
+   
+   font-family: 'Dancing Script', cursive;
+   display: flex;
+   list-style: none;
+   font-size: 25px;
+   margin: 30px;
+   justify-content: space-between;
 }
 
-
 .slidebar{
-    background-color: white;
+    background-color: rgb(135, 135, 135);;
     font-family: 'Exo 2', sans-serif;
     padding: 30px;
     text-decoration: none;
     color: black;
     text-decoration-color: black;
 }
-body{
-    background-color: black;
-    color: aliceblue;
-    
-}
-.slidebar a{
-    text-decoration: none;
-}
-nav ul {
-    
-    display: flex;
-   
-    margin: 30px;
-    justify-content: space-evenly;
-    
-}
 
 body {
   --color: rgb(241, 237, 237);
   --bgColor: rgb(2, 0, 0);
-  /* min-height: 100vh;  */
-  /* display: grid;
-  align-content: center; */
-  /* gap: 2rem; */
-  /* padding: 2rem; */
+  min-height: 100vh; 
+  
+ 
+
  
   font-family: "Poppins", sans-serif;
    color: var(--color);
@@ -161,10 +148,12 @@ ul li .title {
   padding-block-start: 1.5rem;
   padding-block-end: 1rem;
   font-weight: 500;
+  font-size: 25px;
 }
 ul li .descr {
   padding-block-end: 1.5rem;
   font-weight: 300;
+  font-size: 20px;
 }
 
 /* shadows */
@@ -181,7 +170,7 @@ ul li .descr::before {
   transform: translate(-50%, 50%);
 }
 ul li .title::before {
-  bottom: calc(100% + 0.125rem);
+  bottom: calc(100% + 0.1rem);
 }
 
 ul li .descr::before {
@@ -232,7 +221,11 @@ ul li .descr::before {
     <div class="container">
    <header>
     <div class="slidebar">
-      <h1>Meenakshi's Portfolio</h1>
+      <div class="top">
+        <img src="vmi.png" alt="Pic" width="90" height="90" class="d-inline-block align-text-top">
+     <h1>Meenakshi's Portfolio</h1> 
+    </div>
+       <div class="navbar"> 
         <nav>
             <ul>
                 <a href="/"><li>Home</li></a>
@@ -244,7 +237,7 @@ ul li .descr::before {
                 <a href="/contact.html"><l1>Contact me</l1></a>
             </ul>
         </nav>
-      
+      </div>
     </div>
 </header>
     <div class="main">
@@ -257,44 +250,42 @@ ul li .descr::before {
                     <div class="title">	Web Development Intern <br>
                             <p>Aayacare | Bangalore, Karnataka</p></div>
                     <div class="descr">
-                        <ul>
-                                <li>Working as a MERN Stack Developer, where I collaborate with the development team to design, develop, and test new features and functionalities for the Aayacare platform.</li>
+                        
+                                Working as a MERN Stack Developer, where I collaborate with the development team to design, develop, and test new features and functionalities for the Aayacare platform.
                                
                                 <!-- Add more bullet points as needed. -->
-                            </ul></div> 
+                            </div> 
                         </li>
                 <li style="--accent-color:#FBCA3E">
                     <div class="date">Jul 2023 - Jul 2023</div>
                     <div class="title">  Android Developer Intern <br>
                             <p>Oasis Infobyte | Virtual</p></div>
-                    <div class="descr"><ul>
-                                <li>Developed a To-Do List Android Application using Java, XML, SQLite, and Flutter, where the user can list all types of tasks that he needs to complete within the deadline.</li>
+                    <div class="descr">
+                                Developed a To-Do List Android Application using Java, XML, SQLite, and Flutter, where the user can list all types of tasks that he needs to complete within the deadline.
                                 
-                                <!-- Add more bullet points as needed. -->
-                            </ul></div>
+                            </div>
                         </li>
                 <li style="--accent-color:#E24A68">
                     <div class="date">Jun 2023 - Jul 2023</div>
                     <div class="title">HR Intern<br>
                             <p>Rampur Educational & Welfare Trust (REWT) | Virtual</p>
                     </div>
-                    <div class="descr"><ul>
-                                <li>Assisted in the recruitment process, including job postings, resume review and onboarding new fundraising interns.</li>
-                                <li>Guided a team of around 15 new interns with orientation, helping and motivating them to complete their tasks.</li>
+                    <div class="descr">
+                               - Assisted in the recruitment process, including job postings, resume review and onboarding new fundraising interns.<br><br>
+                               - Guided a team of around 15 new interns with orientation, helping and motivating them to complete their tasks.
                        
                                 <!-- Add more bullet points as needed. -->
-                            </ul></div></li>
+                            </div></li>
                             
                                 <li style="--accent-color:#41516C">
                                     <div class="date">	Aug 2022 - Present</div>
                                     <div class="title">	Bachelor of Computer Applications (BCA) <br>
                                             <p>Kristu Jayanti College, Autonomous | Bangalore, Karnataka</p></div>
                                     <div class="descr">
-                                         <ul>
-                                                <li>Percentage - 89.28%</li>
-                                               
-                                                <!-- Add more bullet points as needed. -->
-                                            </ul></div> 
+                                      I worked as a Marketing and budget team member of Xactitude, Technical Fest of Kristu Jayanti College, where I supported my teammates in marketing, bringing in sponsors, and handling the accounting part of the fest. 
+<br><br>
+                                         Percentage - 89.28%
+                                            </div> 
                                         </li>
 
                 <li style="--accent-color:#1B5F8C">
@@ -302,12 +293,12 @@ ul li .descr::before {
                     <div class="title">Article Trainee<br>
                             <p>Tasky Associates | Bhopal, Madhya Pradesh</p>
                         </div>
-                    <div class="descr"> <ul>
-                                <li>Did a Concurrent bank audit in Cent Bank Home Finance Ltd. where I learnt to vouch for records and got audit experience.</li>
-                                <li>Worked with teammates to systematically inspect all the nancial transactions by processing the documents.</li>
+                    <div class="descr"> 
+                               - Did a Concurrent bank audit in Cent Bank Home Finance Ltd. where I learnt to vouch for records and got audit experience.<br><br>
+                               - Worked with teammates to systematically inspect all the nancial transactions by processing the documents.
                        
                                 <!-- Add more bullet points as needed. -->
-                            </ul></div>
+                            </div>
                 </li>
 
 
@@ -322,23 +313,23 @@ ul li .descr::before {
                     <div class="title">CA Foundation<br>
                             <p>Institute of Chartered Accountants in India (ICAI) | Bhopal, Madhya Pradesh</p>
                     </div>
-                    <div class="descr"><ul>
-                                <li>Cleared CA Foundation on 1st attempt, where I learnt about Accounts, Company law, Tax, Financial and Strategic Management</li>
+                    <div class="descr">
+                                Cleared CA Foundation on 1st attempt, where I learnt about Accounts, Company law, Tax, Financial and Strategic Management
                        
                        
                                 <!-- Add more bullet points as needed. -->
-                            </ul></div></li>
+                            </div></li>
                 <li style="--accent-color:#1B5F8C">
                     <div class="date">	Jul 2018 - Jun 2020</div>
                     <div class="title">Senior Secondary (XII) ISC, Commerce<br>
                             <p>Mount Carmel School | Bhopal, Madhya Pradesh</p>
                         </div>
-                    <div class="descr"> <ul>
-                                <li>Percentage - 87.20%</li>
+                    <div class="descr"> 
+                                Percentage - 87.20%
                             
                        
                                 <!-- Add more bullet points as needed. -->
-                            </ul></div>
+                           </div>
                 </li>
             
                 <li style="--accent-color:#41516C">
