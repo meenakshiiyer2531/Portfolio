@@ -8,6 +8,225 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
+
+
+      *{
+    margin: 0;
+    padding: 0;
+}
+
+
+.slidebar{
+    background-color: white;
+    font-family: 'Exo 2', sans-serif;
+    padding: 30px;
+    text-decoration: none;
+    color: black;
+    text-decoration-color: black;
+}
+body{
+    background-color: black;
+    color: aliceblue;
+    
+}
+.slidebar a{
+    text-decoration: none;
+}
+nav ul {
+    
+    display: flex;
+   
+    margin: 30px;
+    justify-content: space-evenly;
+    
+}
+
+body {
+  --color: rgb(241, 237, 237);
+  --bgColor: rgb(2, 0, 0);
+  /* min-height: 100vh;  */
+  /* display: grid;
+  align-content: center; */
+  /* gap: 2rem; */
+  /* padding: 2rem; */
+ 
+  font-family: "Poppins", sans-serif;
+   color: var(--color);
+  background: var(--bgColor); 
+}
+
+h1 {
+  text-align: center;
+}
+
+ul {
+  --col-gap: 2rem;
+  --row-gap: 2rem;
+  --line-w: 0.25rem;
+  display: grid;
+  grid-template-columns: var(--line-w) 1fr;
+  grid-auto-columns: max-content;
+  column-gap: var(--col-gap);
+  list-style: none;
+  width: min(60rem, 90%);
+  margin-inline: auto;
+}
+
+/* line */
+ul::before {
+  content: "";
+  grid-column: 1;
+  grid-row: 1 / span 20;
+  background: rgb(225, 225, 225);
+  border-radius: calc(var(--line-w) / 2);
+}
+
+/* columns*/
+
+/* row gaps */
+ul li:not(:last-child) {
+  margin-bottom: var(--row-gap);
+}
+
+/* card */
+ul li {
+  grid-column: 2;
+  --inlineP: 1.5rem;
+  margin-inline: var(--inlineP);
+  grid-row: span 2;
+  display: grid;
+  grid-template-rows: min-content min-content min-content;
+}
+
+/* date */
+ul li .date {
+  --dateH: 3rem;
+  height: var(--dateH);
+  margin-inline: calc(var(--inlineP) * -1);
+
+  text-align: center;
+  background-color: var(--accent-color);
+
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 700;
+
+  display: grid;
+  place-content: center;
+  position: relative;
+
+  border-radius: calc(var(--dateH) / 2) 0 0 calc(var(--dateH) / 2);
+}
+
+/* date flap */
+ul li .date::before {
+  content: "";
+  width: var(--inlineP);
+  aspect-ratio: 1;
+  background: var(--accent-color);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2) 100%, transparent);
+  position: absolute;
+  top: 100%;
+
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+  right: 0;
+}
+
+/* circle */
+ul li .date::after {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  aspect-ratio: 1;
+  background: var(--bgColor);
+  border: 0.3rem solid var(--accent-color);
+  border-radius: 50%;
+  top: 50%;
+
+  transform: translate(50%, -50%);
+  right: calc(100% + var(--col-gap) + var(--line-w) / 2);
+}
+
+/* title descr */
+ul li .title,
+ul li .descr {
+  background: var(--bgColor);
+  position: relative;
+  padding-inline: 1.5rem;
+}
+ul li .title {
+  overflow: hidden;
+  padding-block-start: 1.5rem;
+  padding-block-end: 1rem;
+  font-weight: 500;
+}
+ul li .descr {
+  padding-block-end: 1.5rem;
+  font-weight: 300;
+}
+
+/* shadows */
+ul li .title::before,
+ul li .descr::before {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 0.5rem;
+  background: rgba(0, 0, 0, 0.5);
+  left: 50%;
+  border-radius: 50%;
+  filter: blur(4px);
+  transform: translate(-50%, 50%);
+}
+ul li .title::before {
+  bottom: calc(100% + 0.125rem);
+}
+
+ul li .descr::before {
+  z-index: -1;
+  bottom: 0.25rem;
+}
+
+@media (min-width: 40rem) {
+  ul {
+    grid-template-columns: 1fr var(--line-w) 1fr;
+  }
+  ul::before {
+    grid-column: 2;
+  }
+  ul li:nth-child(odd) {
+    grid-column: 1;
+  }
+  ul li:nth-child(even) {
+    grid-column: 3;
+  }
+
+  /* start second card */
+  ul li:nth-child(2) {
+    grid-row: 2/4;
+  }
+
+  ul li:nth-child(odd) .date::before {
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+    left: 0;
+  }
+
+  ul li:nth-child(odd) .date::after {
+    transform: translate(-50%, -50%);
+    left: calc(100% + var(--col-gap) + var(--line-w) / 2);
+  }
+  ul li:nth-child(odd) .date {
+    border-radius: 0 calc(var(--dateH) / 2) calc(var(--dateH) / 2) 0;
+  }
+}
+
+
+
+    </style>
+
+
 </head>
 <body>
     <div class="container">
@@ -30,118 +249,113 @@
 </header>
     <div class="main">
         <div class="container">
-            <h2>EXPERIENCE</h2>
-            <div class="experience-card">
-                <div class="carde">
-                    <h3>Web Development Intern</h3>
-                    <p>Aayacare | Bangalore, Karnataka</p>
-                    <p>Jul 2023 - Present</p>
-                    <ul>
-                        <li>Working as a MERN Stack Developer, where I collaborate with the development team to design, develop, and test new features and functionalities for the Aayacare platform.</li>
+            <h2>EXPERIENCE & EDUCATION</h2>
+            
+            <ul>
+                <li style="--accent-color:#41516C">
+                    <div class="date">	Jul 2023 - Present</div>
+                    <div class="title">	Web Development Intern <br>
+                            <p>Aayacare | Bangalore, Karnataka</p></div>
+                    <div class="descr">
+                        <ul>
+                                <li>Working as a MERN Stack Developer, where I collaborate with the development team to design, develop, and test new features and functionalities for the Aayacare platform.</li>
+                               
+                                <!-- Add more bullet points as needed. -->
+                            </ul></div> 
+                        </li>
+                <li style="--accent-color:#FBCA3E">
+                    <div class="date">Jul 2023 - Jul 2023</div>
+                    <div class="title">  Android Developer Intern <br>
+                            <p>Oasis Infobyte | Virtual</p></div>
+                    <div class="descr"><ul>
+                                <li>Developed a To-Do List Android Application using Java, XML, SQLite, and Flutter, where the user can list all types of tasks that he needs to complete within the deadline.</li>
+                                
+                                <!-- Add more bullet points as needed. -->
+                            </ul></div>
+                        </li>
+                <li style="--accent-color:#E24A68">
+                    <div class="date">Jun 2023 - Jul 2023</div>
+                    <div class="title">HR Intern<br>
+                            <p>Rampur Educational & Welfare Trust (REWT) | Virtual</p>
+                    </div>
+                    <div class="descr"><ul>
+                                <li>Assisted in the recruitment process, including job postings, resume review and onboarding new fundraising interns.</li>
+                                <li>Guided a team of around 15 new interns with orientation, helping and motivating them to complete their tasks.</li>
                        
-                        <!-- Add more bullet points as needed. -->
-                    </ul>
-                </div>
-                <div class="carde">
-                    <h3>Android Developer Intern</h3>
-                    <p>Oasis Infobyte | Virtual</p>
-                    <p>Jul 2023 - Jul 2023</p>
-                    <ul>
-                        <li>Developed a To-Do List Android Application using Java, XML, SQLite, and Flutter, where the user can list all types of tasks that he needs to complete within the deadline.</li>
-                        
-                        <!-- Add more bullet points as needed. -->
-                    </ul>
-                </div>
-                <div class="carde">
-                    <h3>HR Intern</h3>
-                    <p>Rampur Educational & Welfare Trust (REWT) | Virtual</p>
-                    <p>Jun 2023 - Jul 2023</p>
-                    <ul>
-                        <li>Assisted in the recruitment process, including job postings, resume review and onboarding new fundraising interns.</li>
-                        <li>Guided a team of around 15 new interns with orientation, helping and motivating them to complete their tasks.</li>
-               
-                        <!-- Add more bullet points as needed. -->
-                    </ul>
-                </div>
-                <div class="carde">
-                    <h3>Article Trainee</h3>
-                    <p>Tasky Associates | Bhopal, Madhya Pradesh</p>
-                    <p>Jun 2022 - Aug 2022</p>
-                    <ul>
-                        <li>Did a Concurrent bank audit in Cent Bank Home Finance Ltd. where I learnt to vouch for records and got audit experience.</li>
-                        <li>Worked with teammates to systematically inspect all the nancial transactions by processing the documents.</li>
-               
-                        <!-- Add more bullet points as needed. -->
-                    </ul>
-                </div>  
-                <!-- Add more cards for each work experience here -->
-            </div>
-        </div>
-    </div>
-    </div>
+                                <!-- Add more bullet points as needed. -->
+                            </ul></div></li>
+                            
+                                <li style="--accent-color:#41516C">
+                                    <div class="date">	Aug 2022 - Present</div>
+                                    <div class="title">	Bachelor of Computer Applications (BCA) <br>
+                                            <p>Kristu Jayanti College, Autonomous | Bangalore, Karnataka</p></div>
+                                    <div class="descr">
+                                         <ul>
+                                                <li>Percentage - 89.28%</li>
+                                               
+                                                <!-- Add more bullet points as needed. -->
+                                            </ul></div> 
+                                        </li>
+
+                <li style="--accent-color:#1B5F8C">
+                    <div class="date">	Jun 2022 - Aug 2022</div>
+                    <div class="title">Article Trainee<br>
+                            <p>Tasky Associates | Bhopal, Madhya Pradesh</p>
+                        </div>
+                    <div class="descr"> <ul>
+                                <li>Did a Concurrent bank audit in Cent Bank Home Finance Ltd. where I learnt to vouch for records and got audit experience.</li>
+                                <li>Worked with teammates to systematically inspect all the nancial transactions by processing the documents.</li>
+                       
+                                <!-- Add more bullet points as needed. -->
+                            </ul></div>
+                </li>
 
 
-    <div class="container">
-        <h2>EDUCATION</h2>
-        <div class="experience-card">
-            <div class="carde">
-                <h3>Bachelor of Computer Applications (BCA)</h3>
-                <p>Kristu Jayanti College, Autonomous | Bangalore, Karnataka</p>
-                <p>Aug 2022 - Present</p>
-                <ul>
-                    <li>Percentage - 89.28%</li>
-                   
-                    <!-- Add more bullet points as needed. -->
-                </ul>
-            </div>
-            <div class="carde">
-                <h3>Bachelor of Commerce (Accounting and Finance)</h3>
-                <p>Indira Gandhi National Open University | Virtual</p>
-                <p>Jun 2021 - Present</p>
-                <ul>
-                   
-                    
-                    <!-- Add more bullet points as needed. -->
-                </ul>
-            </div>
-            <div class="carde">
-                <h3>CA Foundation</h3>
-                <p>Institute of Chartered Accountants in India (ICAI) | Bhopal, Madhya Pradesh</p>
-                <p>Mar 2020 - Mar 2021</p>
-                <ul>
-                    <li>Cleared CA Foundation on 1st attempt, where I learnt about Accounts, Company law, Tax, Financial and Strategic Management</li>
-           
-           
-                    <!-- Add more bullet points as needed. -->
-                </ul>
-            </div>
-            <div class="carde">
-                <h3>Senior Secondary (XII) ISC, Commerce</h3>
-                <p>Mount Carmel School | Bhopal, Madhya Pradesh</p>
-                <p>Jul 2018 - Jun 2020</p>
-                <ul>
-                    <li>Percentage - 87.20%</li>
+                <li style="--accent-color:#FBCA3E">
+                    <div class="date">Jun 2021 - Present</div>
+                    <div class="title"> Bachelor of Commerce (Accounting and Finance) <br>
+                            <p>Indira Gandhi National Open University | Virtual</p></div>
+                    <div class="descr"></div>
+                        </li>
+                <li style="--accent-color:#E24A68">
+                    <div class="date">Mar 2020 - Mar 2021</div>
+                    <div class="title">CA Foundation<br>
+                            <p>Institute of Chartered Accountants in India (ICAI) | Bhopal, Madhya Pradesh</p>
+                    </div>
+                    <div class="descr"><ul>
+                                <li>Cleared CA Foundation on 1st attempt, where I learnt about Accounts, Company law, Tax, Financial and Strategic Management</li>
+                       
+                       
+                                <!-- Add more bullet points as needed. -->
+                            </ul></div></li>
+                <li style="--accent-color:#1B5F8C">
+                    <div class="date">	Jul 2018 - Jun 2020</div>
+                    <div class="title">Senior Secondary (XII) ISC, Commerce<br>
+                            <p>Mount Carmel School | Bhopal, Madhya Pradesh</p>
+                        </div>
+                    <div class="descr"> <ul>
+                                <li>Percentage - 87.20%</li>
+                            
+                       
+                                <!-- Add more bullet points as needed. -->
+                            </ul></div>
+                </li>
+            
+                <li style="--accent-color:#41516C">
+                    <div class="date">	Feb 2013 - Feb 2017</div>
+                    <div class="title">Bachelor of Arts (BA) Bharatnatyam<br>
+                            <p>Indira Kala Sangit Vishwavidyalaya |  Kairagarh, India</p>
+                        </div>
+                    <div class="descr"></div>
+                </li>
+
                 
-           
-                    <!-- Add more bullet points as needed. -->
-                </ul>
-            </div>  
-            <div class="carde">
-                <h3>Bachelor of Arts (BA) Bharatnatyam</h3>
-                <p>Indira Kala Sangit Vishwavidyalaya |  Kairagarh, India</p>
-                <p>Feb 2013 - Feb 2017</p>
-                <ul>
-                   
-                
-           
-                    <!-- Add more bullet points as needed. -->
-                </ul>
-            </div>  
-            <!-- Add more cards for each work experience here -->
-        </div>
-    </div>
+            </ul>
+
+
+   
 </div>
-</div>
+</div> 
 
 
 
@@ -166,4 +380,5 @@
             
         </div>
 </body>
+<script src="https://kit.fontawesome.com/fc596df623.js" crossorigin="anonymous"></script>
 </html>
