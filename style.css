@@ -23,7 +23,7 @@
 }
 
 .slidebar{
-    background-color: white;
+    background-color:rgb(135, 135, 135);
     font-family: 'Exo 2', sans-serif;
     padding: 30px;
     text-decoration: none;
@@ -36,6 +36,7 @@ body{
     
 }
 .slidebar a{
+    color: black;
     text-decoration: none;
 }
 .main{
@@ -53,9 +54,11 @@ body{
 }
 
 nav ul {
+   
     font-family: 'Dancing Script', cursive;
     display: flex;
     list-style: none;
+    font-size: 25px;
     margin: 30px;
     justify-content: space-evenly;
 }
@@ -64,7 +67,7 @@ nav ul a:hover{
     background:black;
     border-radius: 15px;
     padding: 20px;
-    font-size: 20px;
+    font-size: 30px;
     font-family: 'Cinzel', serif;
 }
 
@@ -88,7 +91,7 @@ nav ul a:hover{
 }
 .slidebar h1{
     font-family: 'Playball', cursive;
-    height: 30px;
+    height: 40px;
 
 }
 .foot{
@@ -143,56 +146,6 @@ nav ul a:hover{
 
 
 
-.experience-card {
-    padding: 100px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    font-size: 60px;
-}
-
-
-
-.carde {
-    flex-basis: calc(33.33% - 20px); /* Adjust the width of the cards */
-    padding: 100px;
-   
-font-size: 50px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 6px white;
-}
-
-.carde:hover {
-    padding: 120px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    color: black;
-    background-color: blue;
-}
-
-.carde h3 {
-    font-size: 40px;
-    margin-bottom: 10px;
-}
-
-.carde p {
-    font-size: 30px;
-    color:white;
-    margin-bottom: 5px;
-}
-
-
-.carde ul {
-    list-style: disc;
-    padding-left: 20px;
-}
-
-.carde li {
-    font-size: 40px;
-    margin-bottom: 5px;
-}
-
 
 
 
@@ -226,6 +179,19 @@ font-size: 50px;
     font-size: 30px;
     margin-bottom: 5px;
 }
+/* styles.css */
+/* .project-cards {
+   
+    box-shadow: 0 2px 4px white(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    border: 2px solid #007BFF; /* Add this line to add a border */
+
 
 .project-cards {
     display: flex;
@@ -246,13 +212,13 @@ font-size: 50px;
 
 .card:hover {
     transform: translateY(-5px);
+color: orange;
+border: 2px solid rgb(135, 135, 135);
 
-    color:black;
-background-color: blue;
 }
 
 .card .card-header {
-    background-color: #007bff;
+    background-color: rgb(135, 135, 135);
     color:black;
     padding: 15px;
     text-align: center;
@@ -295,16 +261,18 @@ background-color: blue;
 .card .card-footer a {
     display: inline-block;
     padding: 8px 16px;
-    background-color: #007bff;
-    color:black;
+    color: rgb(255, 255, 255);
+    background-color:black;
     text-decoration: none;
     border-radius: 4px;
     transition: background-color 0.3s ease-in-out;
+    border: 2px solid rgb(135, 135, 135);
 }
 
 .card .card-footer a:hover {
-   
-   color:black;
+    color: rgb(255, 255, 255);
+    background-color: rgb(135, 135, 135);
+  
    
 }
 
@@ -354,7 +322,7 @@ background-color: blue;
 .contact-page h3{
     display: flex;
     justify-content:center;
-    color: lightpink;
+    color: rgb(135, 135, 135);
     padding: 20px;
     font-size: 30px;
     font-family: 'Athiti', sans-serif;
@@ -372,4 +340,31 @@ color: black;
 .contact-page.wa{
     color: green;
     background-color: green;
+}
+
+.cards{
+    
+    color: white;
+    font-size: 20px;
+    
+}
+.cards:hover{
+    
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid rgb(135, 135, 135);
+}
+.about{
+    display: flex;
+    padding-left: 20px;
+    justify-content: center;
+}
+.about img{
+
+    border-radius: 10px;
+    
+}
+.about p{
+    padding-top: 0.0000001px;
 }
